@@ -31,7 +31,7 @@ if (isset($_POST['name']) && isset($_POST['age']) && isset($_POST['gender']) && 
     $db = new DB_CONNECT();
  
     // mysql inserting a new row
-    $result = mysql_query("INSERT INTO patients(name, age, gender, occupation, slot1, slot2, slot3, slot4, slot5, slot6) VALUES('$name', '$age','$gender', '$occupation', '$slot1', '$slot2', '$slot3', '$slot4', '$slot5', '$slot6')");
+    $result = mysql_query("INSERT INTO intervention_slots(name, age, gender, occupation, slot1, slot2, slot3, slot4, slot5, slot6) VALUES('$name', '$age','$gender', '$occupation', '$slot1', '$slot2', '$slot3', '$slot4', '$slot5', '$slot6')");
  
     // check if row inserted or not
     if ($result) {
