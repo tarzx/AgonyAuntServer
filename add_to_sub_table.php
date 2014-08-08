@@ -26,7 +26,7 @@ if (isset($_POST['control_level']) && isset($_POST['age']) && isset($_POST['sub_
     $db = new DB_CONNECT();
  
     // mysql inserting a new row
-    $result = mysql_query("INSERT INTO sub_questions(control_level, age, sub_question) VALUES('$name', '$age','$sub_question')");
+    $result = mysql_query("INSERT INTO sub_questions(control_level, age, sub_question) VALUES('$control_level', '$age','$sub_question')");
  
     // check if row inserted or not
     if ($result) {
