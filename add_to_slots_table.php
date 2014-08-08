@@ -10,18 +10,18 @@
 $response = array();
  
 // check for required fields
-if (isset($_POST['name']) && isset($_POST['age']) && isset($_POST['gender']) && isset($_POST['occupation']) && isset($_POST['slot1']) && isset($_POST['slot2']) && isset($_POST['slot3']) && isset($_POST['slot4']) && isset($_POST['slot5']) && isset($_POST['slot6'])) {
+if (isset($_POST['age']) && isset($_POST['gender']) && isset($_POST['occupation']) && isset($_POST['slot1']) && isset($_POST['slot2']) && isset($_POST['slot3']) && isset($_POST['slot4']) && isset($_POST['slot5']) && isset($_POST['slot6'])) {
  
-    $name = $_POST['name'];
+
     $age = $_POST['age'];
     $gender = $_POST['gender'];
     $occupation = $_POST['occupation'];
     $slot1 = $_POST['slot1'];
-    $slot1 = $_POST['slot2'];
-    $slot1 = $_POST['slot3'];
-    $slot1 = $_POST['slot4'];
-    $slot1 = $_POST['slot5'];
-    $slot1 = $_POST['slot6'];
+    $slot2 = $_POST['slot2'];
+    $slot3 = $_POST['slot3'];
+    $slot4 = $_POST['slot4'];
+    $slot5 = $_POST['slot5'];
+    $slot6 = $_POST['slot6'];
 
  
     // include db connect class
@@ -31,7 +31,7 @@ if (isset($_POST['name']) && isset($_POST['age']) && isset($_POST['gender']) && 
     $db = new DB_CONNECT();
  
     // mysql inserting a new row
-    $result = mysql_query("INSERT INTO intervention_slots(name, age, gender, occupation, slot1, slot2, slot3, slot4, slot5, slot6) VALUES('$name', '$age','$gender', '$occupation', '$slot1', '$slot2', '$slot3', '$slot4', '$slot5', '$slot6')");
+    $result = mysql_query("INSERT INTO intervention_slots(age, gender, occupation, slot1, slot2, slot3, slot4, slot5, slot6) VALUES('$age','$gender', '$occupation', '$slot1', '$slot2', '$slot3', '$slot4', '$slot5', '$slot6')");
  
     // check if row inserted or not
     if ($result) {
