@@ -32,7 +32,7 @@ if (isset($_POST['control_level']) && isset($_POST['age']) && isset($_POST['sub_
     if ($result) {
         // successfully inserted into database
         $response["success"] = 1;
-        $response["message"] = "Patient successfully created.";
+        $response["message"] = "Sub table record successfully created.";
  
         // echoing JSON response
         echo json_encode($response);
