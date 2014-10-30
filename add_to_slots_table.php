@@ -37,7 +37,7 @@ if (isset($_POST['age']) && isset($_POST['gender']) && isset($_POST['occupation'
     if ($result) {
         // successfully inserted into database
         $response["success"] = 1;
-        $response["message"] = "Slots table record successfully created.";
+        $response["message"] = "Slots successfully created.";
  
         // echoing JSON response
         echo json_encode($response);
