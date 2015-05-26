@@ -12,7 +12,7 @@ $db = new DB_CONNECT();
 
 
 //select table to export the data
-$select_table = mysql_query('SELECT c1.control_level, (YEAR(CURDATE())-c2.birth_year) age, c2.gender, c1.frequency1, c1.frequency2, c1.frequency3, c1.frequency4, c1.frequency5, c1.frequency6, c1.frequency7 FROM CBT_preference c1 join CBT_patients c2 on c1.pid=c2.pid;');
+$select_table = mysql_query('SELECT c1.control_level, (YEAR(CURDATE())-c2.birth_year) age, c2.gender, c1.frequency1, c1.frequency2, c1.frequency3, c1.frequency4, c1.frequency5, c1.frequency6, c1.frequency7 FROM CBT_preference c1 JOIN CBT_patients c2 ON c1.pid=c2.pid WHERE (c1.frequency1 IS NOT NULL OR c1.frequency2 IS NOT NULL OR c1.frequency3 IS NOT NULL OR c1.frequency4 IS NOT NULL OR c1.frequency5 IS NOT NULL OR c1.frequency6 IS NOT NULL OR c1.frequency7 IS NOT NULL);');
 $rows = mysql_fetch_assoc($select_table);
 
 $fp = fopen('frequencyIntervention.csv', 'w');
