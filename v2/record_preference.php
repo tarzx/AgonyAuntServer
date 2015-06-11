@@ -2,8 +2,8 @@
 <?php
  
 /*
- * Following code will create a new patient row
- * All patient details are read from HTTP Post Request
+ * Following code will save patient's preference 
+ * All input data are read from HTTP Post Request
  */
  
 // array for JSON response
